@@ -1,0 +1,18 @@
+import java.util.Scanner;
+ 
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+      
+      double n1, a1;
+
+      n1 = in.nextDouble();
+
+      
+
+      a1 = (n1 - 32) * 5/9;
+     
+      System.out.printf("%.2f°\n" , + a1 );
+     
+   }
+}
