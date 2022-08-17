@@ -1,0 +1,28 @@
+import java.util.Scanner;
+ 
+ 
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+      
+      float n1, n2, n3, a1;
+      
+      
+      System.out.println("Informe a distancia em KMs: ");
+      n1 = in.nextFloat();
+
+      System.out.println("Informe a velocidade media em KM/h: ");
+      n2 = in.nextFloat();
+
+      
+      n2 = n2 / 0.60f;
+      n3 = (n1 / n2);
+      a1 = n3 / 0.60f;
+      
+      System.out.printf( "Voce ira demorar %.2fh para chegar ao destino.\n " , a1);
+
+      
+
+     
+   }
+}
