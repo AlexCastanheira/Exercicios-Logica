@@ -1,0 +1,33 @@
+import java.util.Scanner;
+ 
+ 
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+      
+      int votosValidos, votosBrancos, votosNulos, total;
+      float percValidos, percBrancos, percNulos;
+
+      System.out.println("Informe o numero de votos validos ");
+      votosValidos = in.nextInt();
+      System.out.println("Informe o numero de votos em branco ");
+      votosBrancos = in.nextInt();
+      System.out.println("Informe o numero de votos nulos ");
+      votosNulos = in.nextInt();
+
+      total = votosValidos + votosBrancos + votosNulos;
+
+
+      percValidos = (float) votosValidos / total;
+      percBrancos = (float) votosBrancos / total;
+      percNulos = (float) votosNulos / total;
+
+      System.out.println("\nO total de votos é de " + total + " votos\n");     
+      System.out.printf("O percentual de votos validos é de %.2f%%\n" , percValidos);
+      System.out.printf("O percentual de votos em branco é de %.2f%%\n" , percBrancos);
+      System.out.printf("O percentual de votos nulos é de %.2f%%\n" , percNulos);
+      
+
+     
+   }
+}
