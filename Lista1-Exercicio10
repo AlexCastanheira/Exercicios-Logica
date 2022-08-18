@@ -1,0 +1,39 @@
+import java.util.Scanner;
+ 
+ 
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+      
+      int socios, nsocio, crianca,total;
+      float ingresso, ingressoS, pagante, paganteS, valorT, valorNP, valorDC, desconto, perdido;
+
+   
+      System.out.println("Qual o valor do ingresso? ");
+      ingresso = in.nextFloat();
+      System.out.println("Numero de socios ");
+      socios = in.nextInt();
+      System.out.println("Numero nao socios ");
+      nsocio = in.nextInt();
+      System.out.println("Numero criancas ");
+      crianca = in.nextInt();
+
+      total =  socios + nsocio + crianca;
+      pagante = nsocio * ingresso;
+      desconto = ingresso * 0.30f;
+      ingressoS = ingresso - desconto;
+      paganteS = socios * ingressoS;
+      valorNP = crianca * ingresso;
+      valorDC = socios * desconto;
+      
+      valorT = pagante + paganteS;
+      perdido = valorDC + valorNP;
+
+
+      System.out.println("\nO publico do evento eh de "  + total + " pessoas.");
+      System.out.printf("\nValor arrecadado: R$ %.2f\n", valorT);  
+      System.out.printf("Foi deixado de arrecadar: R$ %.2f\n\n", perdido);
+
+     
+   }
+}
