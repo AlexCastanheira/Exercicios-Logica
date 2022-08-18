@@ -1,0 +1,26 @@
+import java.util.Scanner;
+ 
+ 
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+      
+      int homem, mulher, crianca;
+      float total, total2, total3;
+
+   
+      System.out.println("Quantos homens comparecerao? ");
+      homem = in.nextInt() * 400;
+      System.out.println("Quantas mulheres? ");
+      mulher = in.nextInt() * 320;
+      System.out.println("quantas criancas? ");
+      crianca = in.nextInt() * 200;
+
+      total =  homem + mulher + crianca;
+      total2 = total * 0.20f;
+      total3 = total + total2;
+      System.out.printf("total de %.2f kg\n"  , total3/1000);    
+
+     
+   }
+}
