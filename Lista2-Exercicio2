@@ -1,0 +1,31 @@
+import java.util.Scanner;
+ 
+ 
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+      
+    float base, base2, altura, altura2, area, perimetro;
+
+    System.out.println("\nInforme as medidas do retangulo:\n " );
+
+    System.out.println("Base:");
+    base = in.nextFloat();
+    System.out.println("Altura:");
+    altura = in.nextFloat();
+    System.out.println("Base 2:");
+    base2 = in.nextFloat();
+    System.out.println("Altura 2:");
+    altura2 = in.nextFloat();
+
+    perimetro = base + altura + base2 + altura2;
+    area = base * altura; 
+
+
+    System.out.printf("\nO perimetro é de: %.0f \n" , perimetro );
+    System.out.printf("A area é de: %.0f \n" , area );
+
+
+     
+   }
+}
