@@ -1,0 +1,18 @@
+import java.util.Scanner;
+ 
+ 
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+      
+    double cm, mt;
+
+    System.out.println("Informe a medida em metros: " );
+    mt = in.nextDouble();
+    cm = mt * 100;
+
+    System.out.printf("A medida em centimetros é de %.0f cm\n" , cm );
+
+     
+   }
+}
