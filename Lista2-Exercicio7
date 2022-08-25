@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Main {
+
+   // INICIO
+
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+      float salarioHoras, horas, desconto, salarioMes, salarioLiquido;
+
+      System.out.println("\nInforme seu ganho por hora:");
+      salarioHoras = in.nextFloat();
+      System.out.println("\nInforme quantas horas trabalha por mês:");
+      horas = in.nextFloat();
+      salarioMes = (float) (salarioHoras * horas);
+      System.out.println("\nInforme a porcentagem de descontos:");
+      desconto = in.nextFloat();
+      desconto = 1 - (desconto / 100);
+      salarioLiquido = salarioMes * desconto;
+
+      System.out.printf("\nVoce recebe R$: %.2f por mês\n\n", salarioLiquido);
+
+     
+   }
+}
