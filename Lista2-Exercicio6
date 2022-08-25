@@ -1,0 +1,45 @@
+import java.util.*;
+
+public class Main {
+
+   // INICIO
+
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+      Calendar cal = Calendar.getInstance();
+      int ano, mes, dia, anoData, mesData, diaData, idade_ano, idade_mes, idade_dia, total;
+
+      anoData = cal.get(Calendar.YEAR);
+      mesData = cal.get(Calendar.MONTH) + 1;
+      diaData = cal.get(Calendar.DAY_OF_MONTH);
+
+      System.out.println("Digite sua data de nascimento no formato D/M/AAAA:\n");
+      dia = in.nextInt();
+      mes = in.nextInt();
+      ano = in.nextInt();
+
+      if (mesData > mes && diaData > dia) {
+         idade_ano = anoData - ano;
+         idade_mes = mesData - mes;
+         idade_dia = diaData - dia;
+      } else if (mesData > mes && diaData < dia) {
+         idade_ano = anoData - ano;
+         idade_mes = (mesData - mes) - 1;
+         idade_dia = ((diaData - dia) - 31) * (-1);
+      } else {
+         idade_ano = (anoData - ano) - 1;
+         idade_mes = (mesData - mes) + 11;
+         idade_dia = ((diaData - dia) - 31) * (-1);
+      }
+
+      if (idade_dia > 31) {
+         idade_mes += 1;
+         idade_dia -= 31;
+      }
+
+      total = (idade_ano * 365) + (idade_mes * 31) + idade_dia;
+      System.out.printf("Você tem %d anos, %d meses e %d dias\n", idade_ano, idade_mes, idade_dia);
+      System.out.printf("E viveu " + total + " dias.\n");
+
+   }
+}
