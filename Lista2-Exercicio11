@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Main {
+
+   // INICIO
+
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      int valor1, valor2, resultado1;
+
+      System.out.print("Informe um valor: ");
+      valor1 = in.nextInt();
+      System.out.print("Informe outro valor: ");
+      valor2 = in.nextInt();
+
+      resultado1 = valor1 + valor2;
+
+      if (resultado1 > 20) {
+         System.out.println("A soma + 8 é igual " + (resultado1) + 8);
+
+      } else {
+         System.out.println("A soma - 10 é igual " + (resultado1 - 10));
+      }
+
+   }
+}
