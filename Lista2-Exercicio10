@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Main {
+
+   // INICIO
+
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      int idade;
+
+      System.out.print("Informe sua idade: ");
+      idade = in.nextInt();
+
+      if (idade >= 18) {
+         System.out.println("Voce está na categoria ADULTO.\n");
+      } else if (idade >= 14) {
+         System.out.println("Voce está na categoria JUVENIL.\n");
+      } else if (idade >= 9) {
+         System.out.println("Voce está na categoria INFANTIL.\n");
+      } else {
+         System.out.println("Voce está na categoria MIRIM.\n");
+      }
+
+   }
+}
