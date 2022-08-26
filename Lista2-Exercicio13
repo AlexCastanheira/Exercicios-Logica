@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Main {
+
+   // INICIO
+
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      int nota1, nota2, media;
+
+      System.out.print("Primeira avaliação: ");
+      nota1 = in.nextInt();
+      System.out.print("Segunda avaliação: ");
+      nota2 = in.nextInt();
+      
+      media = nota1 + nota2 / 2;
+      
+      if (media > 6) {
+         System.out.println("Parabéns! Voce foi aprovado com média: " + media);
+
+      } else {
+         System.out.println("Que pena! Voce foi reprovado com média: " + media);
+      }
+
+   }
+}
