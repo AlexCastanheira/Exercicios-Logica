@@ -1,0 +1,23 @@
+
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      int horaIni, horaFim, duracao;
+
+      System.out.println("Hora de inicio: ");
+      horaIni = in.nextInt();
+      System.out.println("Hora de fim: ");
+      horaFim = in.nextInt();
+
+      if (horaFim > horaIni) {
+         duracao = horaFim - horaIni;
+      } else {
+         duracao = (24 + horaFim) - horaIni;
+      }
+
+      System.out.println("A partida durou " + duracao + " horas");
+   }
+}
