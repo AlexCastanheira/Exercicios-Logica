@@ -1,0 +1,23 @@
+import java.util.*;
+
+
+public class Main {
+
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      double raio, diametro, perimetro, area, PI;
+      PI = 3.141692;
+
+      System.out.print("Informe o raio em metros: ");
+      raio = in.nextDouble();
+      diametro = raio * 2;
+      area = PI * diametro;
+      perimetro = PI * (raio * raio);
+
+      System.out.printf("O diametro é de %.2f\n", diametro);
+      System.out.printf("A area é de %.2f\n", area);
+      System.out.printf("O perimetro é de %.2f\n\n", perimetro);
+
+   }
+}
