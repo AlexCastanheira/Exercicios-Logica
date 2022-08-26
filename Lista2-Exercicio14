@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class Main {
+
+   // INICIO
+
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+      Calendar cal = Calendar.getInstance();
+      int ano, anoData;
+
+      anoData = cal.get(Calendar.YEAR);
+
+      System.out.print("Digite o ano de seu nascimento: ");
+      ano = in.nextInt();
+
+      if (ano <= anoData - 16) {
+         System.out.println("Voce pode votar.\n ");
+      } else {
+         System.out.println("Voce ainda não tem idade para votar.\n");
+      }
+
+   }
+}
