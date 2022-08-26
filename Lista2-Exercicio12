@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Main {
+
+   // INICIO
+
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      int quantidade;
+      double valor1, valor2;
+
+      System.out.print("Informe quantas maças quer: ");
+      quantidade = in.nextInt();
+      valor1 = 1.50;
+      valor2 = 1.30;
+
+      if (quantidade < 12) {
+         System.out.printf("Total a pagar: R$ %.2f\n ", (quantidade * valor1));
+
+      } else {
+         System.out.printf("Total a pagar: R$ %.2f\n ", (quantidade * valor2));
+      }
+
+   }
+}
