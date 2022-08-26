@@ -1,0 +1,27 @@
+
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      float salario, emprestimo, valorParc;
+      int parcelas;
+
+      System.out.print("Qual seu salário? ");
+      salario = in.nextFloat();
+      System.out.print("Valor do empréstimo: ");
+      emprestimo = in.nextFloat();
+      System.out.print("Numero de prestações: ");
+      parcelas = in.nextInt();
+
+      valorParc = (float) (emprestimo / parcelas);
+
+      if (valorParc > salario * 0.30f) {
+         System.out.println("Empréstimo negado!");
+      } else {
+         System.out.println("Empréstimo aceito!!");
+      }
+
+   }
+}
