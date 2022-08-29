@@ -1,0 +1,31 @@
+
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      float kmInicial, kmFinal, kmRodada, combustivel, litros, valorRecebido, valorFinal, media;
+      double combustivelPre = 4.599;
+
+      System.out.print("Informe a kilometragem inicial: ");
+      kmInicial = in.nextFloat();
+      System.out.print("Informe a kilometragem final: ");
+      kmFinal = in.nextFloat();
+
+      kmRodada = (kmFinal - kmInicial);
+
+      System.out.print("Informe a quantos litros de combustivel usou: ");
+      litros = in.nextFloat();
+      System.out.print("Informe qual o valor total pago pelos passageiros ");
+      valorRecebido = in.nextFloat();
+
+      combustivel = (float) (litros * combustivelPre);
+      valorFinal = valorRecebido - combustivel;
+      media = (kmRodada / litros);
+
+      System.out.printf("Seu veiculo faz em media %.0f Km por litro.\n", media);
+      System.out.printf("Seu lucro diario foi de R$ %.2f \n", valorFinal);
+
+   }
+}
