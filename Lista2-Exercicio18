@@ -1,0 +1,26 @@
+
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      float salario, vendas, valCarro, salarioFinal, comissao;
+      int quantidade;
+
+      System.out.print("Informe quantos carros vendeu: ");
+      quantidade = in.nextInt();
+      System.out.print("Informe seu salário: ");
+      salario = in.nextFloat();
+      System.out.print("Informe o valor total das suas vendas: ");
+      vendas = in.nextFloat();
+      System.out.print("Informe quanto recebe por carro: ");
+      valCarro = in.nextFloat();
+      comissao = quantidade * valCarro;
+
+      salarioFinal = salario + comissao + (vendas * 0.05f);
+
+      System.out.printf("O salario final é de R$ %.2f \n", salarioFinal);
+
+   }
+}
