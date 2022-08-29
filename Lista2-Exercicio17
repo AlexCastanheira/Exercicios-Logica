@@ -1,0 +1,21 @@
+
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      float custoFinal, custoFabrica, imposto, distribuidor;
+
+      System.out.print("Qual valor de fábrica? ");
+      custoFabrica = in.nextFloat();
+
+      imposto = custoFabrica * 0.45f;
+      distribuidor = custoFabrica * 0.28f;
+
+      custoFinal = custoFabrica + imposto + distribuidor;
+
+      System.out.printf("O valor final é de R$ %.2f \n", custoFinal);
+
+   }
+}
