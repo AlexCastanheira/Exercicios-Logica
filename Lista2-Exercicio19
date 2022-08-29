@@ -1,0 +1,24 @@
+
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      float altura, largura, comprimento, caixas, area;
+
+      System.out.print("Informe a altura em metros: ");
+      altura = in.nextFloat();
+      System.out.print("Informe a largura em metros: ");
+      largura = in.nextFloat();
+      System.out.print("Informe comprimento em metros: ");
+      comprimento = in.nextFloat();
+
+      area = ((largura * 2) * altura) + ((comprimento * 2) * altura);
+
+      caixas = area / 1.5f;
+
+      System.out.printf("Vai precisar de %.2f caixas\n", caixas);
+
+   }
+}
