@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      int atual, maxima, minima, media;
+
+      System.out.print("Digite a quantidade atual em estoque: ");
+      atual = in.nextInt();
+      System.out.print("Informe quantidade mínima do estoque: ");
+      minima = in.nextInt();
+      System.out.print("Informe a quantidade máxima: ");
+      maxima = in.nextInt();
+
+      media = (maxima + minima) / 2;
+
+      if (atual >= media) {
+         System.out.println("\nNão efetuar a compra.\n");
+      } else {
+         System.out.println("\nEfetuar a compra.\n");
+      }
+
+   }
+}
