@@ -1,0 +1,47 @@
+
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      int idadeH1, idadeH2, idadeM1, idadeM2, mNova, mVelha, hNovo, hVelho, soma, produto;
+
+      System.out.print("Informe a idade do primeiro homem: ");
+      idadeH1 = in.nextInt();
+      System.out.print("Informe a idade do segundo homem: ");
+      idadeH2 = in.nextInt();
+      System.out.print("Informe a idade da primeira mulher: ");
+      idadeM1 = in.nextInt();
+      System.out.print("Informe a idade da segunda mulher: ");
+      idadeM2 = in.nextInt();
+
+      if (idadeH1 > idadeH2) {
+         hVelho = idadeH1;
+         hNovo = idadeH2;
+      } else {
+         hVelho = idadeH2;
+         hNovo = idadeH1;
+      }
+      if (idadeM1 > idadeM2) {
+         mVelha = idadeM1;
+         mNova = idadeM2;
+      } else {
+         mVelha = idadeM2;
+         mNova = idadeM1;
+
+      }
+
+      soma = hVelho + mNova;
+      produto = hNovo * mVelha;
+
+      System.out.println("\nO homem mais velho tem " + hVelho + " anos.");
+      System.out.println("O homem mais novo tem " + hNovo + " anos.");
+      System.out.println("A mulher mais velha tem " + mVelha + " anos.");
+      System.out.println("A mulher mais nova tem " + mNova + " anos.\n");
+      System.out.println("A soma do homem mais velho e a mulher mais nova é igual a " + soma + " anos.");
+      System.out.println(
+            "O produto entre a idade do homem mais novo e a mulher mais velha é igual a " + produto + " anos.\n");
+
+   }
+}
