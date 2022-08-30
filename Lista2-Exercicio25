@@ -1,0 +1,38 @@
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      double real = 1.00, cinquenta = 0.50, vinteCinco = 0.25, dez = 0.10, cinco = 0.05, vReal, vCinquenta, vVintecinco,
+            vDez, vCinco, soma, preco;
+      int qReal, qCinquenta, qVintecinco, qDez, qCinco;
+
+      System.out.print("Qual o valor do produto? ");
+      preco = in.nextDouble();
+      System.out.print("Quantas moedas de um Real possui? ");
+      qReal = in.nextInt();
+      vReal = qReal * real;
+      System.out.print("Quantas moedas de 0,50 possui? ");
+      qCinquenta = in.nextInt();
+      vCinquenta = qCinquenta * cinquenta;
+      System.out.print("Quantas moedas de 0,25 possui? ");
+      qVintecinco = in.nextInt();
+      vVintecinco = qVintecinco * vinteCinco;
+      System.out.print("Quantas moedas de 0,10 possui? ");
+      qDez = in.nextInt();
+      vDez = qDez * dez;
+      System.out.print("Quantas moedas de 0,05 possui? ");
+      qCinco = in.nextInt();
+      vCinco = qCinco * cinco;
+
+      soma = vReal + vCinquenta + vVintecinco + vDez + vCinco;
+
+      if (soma >= preco) {
+         System.out.printf("voce pode comprar, pois possui R$ %.2f \n", soma);
+      } else {
+         System.out.printf("voce não pode comprar, pois possui R$ %.2f \n", soma);
+      }
+
+   }
+}
