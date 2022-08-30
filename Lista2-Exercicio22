@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      String conta;
+      float saldo, debito, credito, saldoAtual;
+
+      System.out.print("Digite o numero da conta: ");
+      conta = in.next();
+      System.out.print("Informe o saldo: ");
+      saldo = in.nextFloat();
+      System.out.print("Informe o debito atual: ");
+      debito = in.nextFloat();
+      System.out.print("Informe o credito: ");
+      credito = in.nextFloat();
+
+      saldoAtual = (float) saldo - debito + credito;
+
+      if (saldoAtual >= 0) {
+         System.out.printf("A conta " + conta + " está com saldo positivo de: R$ %.2f \n", saldoAtual);
+      } else {
+         System.out.printf("A conta " + conta + " está com saldo negativo de: R$ %.2f \n", saldoAtual);
+      }
+
+   }
+}
