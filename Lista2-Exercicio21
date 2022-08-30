@@ -1,0 +1,29 @@
+
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      float pista, parada, litros, kmRodada, consumo;
+      int nVoltas, nAbast;
+
+      System.out.print("Informe a metragem da pista: ");
+      pista = in.nextFloat();
+      System.out.print("Informe o numero de voltas: ");
+      nVoltas = in.nextInt();
+      System.out.print("Informe o consumo de litros por Km: ");
+      litros = in.nextFloat();
+      System.out.print("Informe o numero de abastecimentos desejado: ");
+      nAbast = in.nextInt();
+
+      kmRodada = (float)(pista * nVoltas) / 1000f;
+      parada = (float) kmRodada / nAbast;
+      consumo = parada / litros;
+
+
+      System.out.printf("Voce precisará de %.1f litros.\n", consumo);
+      
+
+   }
+}
