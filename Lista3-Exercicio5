@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      int A, B, C;
+      System.out.print("Informe o tamanho do lado A: ");
+      A = in.nextInt();
+      System.out.print("Informe o tamanho do lado B: ");
+      B = in.nextInt();
+      System.out.print("Informe o tamanho do lado C: ");
+      C = in.nextInt();
+
+      if (A + B > C && A + C > B && B + C > A) {
+
+         System.out.println("\nÉ um triangulo. ");
+      } else {
+         System.out.println("\nNão é um triangulo. ");
+
+      }
+
+   }
+}
