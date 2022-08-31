@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      String time1, time2;
+      int gol1, gol2;
+
+      System.out.println("Nome do time 1: ");
+      time1 = in.next();
+      System.out.println("Quantos gols marcou o " + time1 + "?");
+      gol1 = in.nextInt();
+      System.out.println("Nome do time 2: ");
+      time2 = in.next();
+      System.out.println("Quantos gols marcou o " + time2 + "?");
+      gol2 = in.nextInt();
+
+      if (gol1 > gol2) {
+
+         System.out.println(time1 + " venceu! ");
+      } else if (gol1 < gol2) {
+         System.out.println(time2 + " venceu! ");
+
+      } else {
+         System.out.println("\nEmpate! ");
+
+      }
+
+   }
+}
