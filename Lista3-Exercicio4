@@ -1,0 +1,51 @@
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      int numero1, numero2, numero3, maior = 0, Segmaior = 0, Tercmaior = 0;
+      System.out.print("Informe um número: ");
+      numero1 = in.nextInt();
+      System.out.print("Informe outro número: ");
+      numero2 = in.nextInt();
+      System.out.print("Informe outro número: ");
+      numero3 = in.nextInt();
+
+      if (numero1 > numero2 && numero1 > numero3 && numero2 > numero3) {
+         maior = numero1;
+         Segmaior = numero2;
+         Tercmaior = numero3;
+
+      } else if (numero2 > numero1 && numero2 > numero3 && numero1 > numero3) {
+         maior = numero2;
+         Segmaior = numero1;
+         Tercmaior = numero3;
+
+      } else if (numero3 > numero2 && numero3 > numero1 && numero2 > numero1) {
+         maior = numero3;
+         Segmaior = numero2;
+         Tercmaior = numero1;
+
+      } else if (numero2 > numero1 && numero2 > numero3 && numero1 < numero3) {
+         maior = numero2;
+         Segmaior = numero3;
+         Tercmaior = numero1;
+
+      } else if (numero3 > numero1 && numero3 > numero2 && numero1 > numero2) {
+         maior = numero3;
+         Segmaior = numero1;
+         Tercmaior = numero2;
+
+      } else if (numero1 > numero2 && numero1 > numero3 && numero2 < numero3) {
+         maior = numero1;
+         Segmaior = numero3;
+         Tercmaior = numero2;
+      }
+
+      System.out.println(Tercmaior);
+      System.out.println(Segmaior);
+      System.out.println(maior);
+
+   }
+}
