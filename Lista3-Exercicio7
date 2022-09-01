@@ -1,0 +1,37 @@
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      char combustivel;
+      float alcool = 3.90f, gasol = 4.30f, preco;
+      int quantidade;
+      System.out.println("Qual o tipo de combustivel?\n A = Alcool - G = gasolina ");
+      combustivel = in.next().charAt(0);
+      System.out.println("Quantos litros? ");
+      quantidade = in.nextInt();
+
+      if (combustivel == 'A' && quantidade >= 20) {
+         preco = (alcool * quantidade) * 0.95f;
+
+         System.out.printf("O valor pago será de R$ %.2f\n ", preco);
+      } else if (combustivel == 'A' && quantidade < 20) {
+         preco = (alcool * quantidade) * 0.97f;
+
+         System.out.printf("O valor pago será de R$ %.2f\n ", preco);
+
+      }
+
+      if (combustivel == 'G' && quantidade >= 20) {
+         preco = (gasol * quantidade) * 0.94f;
+
+         System.out.printf("O valor pago será de R$ %.2f\n ", preco);
+      } else if (combustivel == 'G' && quantidade < 20) {
+         preco = (gasol * quantidade) * 0.96f;
+
+         System.out.printf("O valor pago será de R$ %.2f\n ", preco);
+      }
+
+   }
+}
