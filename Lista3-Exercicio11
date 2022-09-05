@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      int lados;
+      float tamanho, total;
+
+      System.out.print("Digite o numero de lados: ");
+      lados = in.nextInt();
+
+      if (lados == 5) {
+         System.out.println("\nÉ um pentágono\n ");
+
+      } else {
+         System.out.print("Digite o tamanho dos lados: ");
+         tamanho = in.nextFloat();
+
+         if (lados == 4) {
+            total = (tamanho * tamanho);
+            System.out.printf("\nÉ um quadrado e sua área é de %.2f\n ", total);
+
+         }
+         if (lados == 3) {
+            total = (tamanho * 3);
+            System.out.printf("\nÉ um triângulo e seu perímetro é de %.2f\n ", total);
+
+         }
+      }
+
+   }
+}
