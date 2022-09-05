@@ -1,0 +1,35 @@
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      float valor, desconto, total, totalSD = 0;
+      int quantidade;
+      String nome;
+
+      System.out.println("Diga o nome do produto:");
+      nome = in.next();
+      System.out.println("Informe a quantidade: ");
+      quantidade = in.nextInt();
+      System.out.println("informe o valor do produto: ");
+      valor = in.nextFloat();
+
+      if (quantidade <= 5) {
+         desconto = 0.98f;
+      } else if (quantidade <= 10) {
+         desconto = 0.97f;
+      } else if (quantidade > 10) {
+         desconto = 0.95f;
+      } else {
+         desconto = 0;
+      }
+
+      total = (valor * quantidade) * desconto;
+      totalSD = (valor * quantidade) - total; 
+      
+      System.out.println("Voce escolheu comprar " + quantidade + " " + nome);
+      System.out.printf("E o valor a ser pago é de R$ %.2f \n", total);
+      System.out.printf("O desconto foi de %.2f\n ", totalSD);
+   }
+}
