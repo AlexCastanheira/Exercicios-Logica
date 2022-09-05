@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      int codigo = 1234, senha = 9999, enterCod, enterPass = 0, loop = 3;
+
+      while (loop > 0) {
+         System.out.print("Digite o código de usuário: ");
+         enterCod = in.nextInt();
+
+         if (enterCod == codigo) {
+            loop = 3;
+            System.out.print("\nDigite a senha: ");
+            enterPass = in.nextInt();
+
+         } else {
+            System.out.print("\nUsuário inválido\n");
+
+         }
+
+         if (enterPass == senha) {
+            System.out.print("\nAcesso permitido\n");
+            break;
+         } else if (enterCod == codigo && enterPass != senha) {
+            System.out.print("\nAcesso negado\n");
+            loop = loop - 1;
+         }
+      }
+
+   }
+}
