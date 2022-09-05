@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      float sexo, pesoH, pesoM, altura;
+
+      System.out.println("Digite 1 = homem ou 2 = mulher");
+      sexo = in.nextFloat();
+      System.out.println("Diga  altura:");
+      altura = in.nextFloat();
+
+      if (sexo == 1) {
+         pesoH = (float) (72.7 * altura) - 58f;
+         System.out.printf("o peso ideal é %.2f\n", pesoH);
+      } else {
+
+         pesoM = (float) (62.1 * altura) - 44.7f;
+         System.out.printf("o peso ideal é %.2f\n", pesoM);
+
+      }
+   }
+}
