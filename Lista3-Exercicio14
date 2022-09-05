@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      float nota1, nota2, nota3, media;
+
+      System.out.println("Primeira nota:");
+      nota1 = in.nextFloat();
+      System.out.println("Segunda nota");
+      nota2 = in.nextFloat();
+      System.out.println("Terceira nota");
+      nota3 = in.nextFloat();
+
+      media = (nota1 + nota2 + nota3) / 3;
+
+      if (media >= 9.0) {
+         System.out.println("O aluno tirou A");
+      } else if (media >= 7.5) {
+         System.out.println("O aluno tirou B");
+      } else if (media >= 6.0) {
+         System.out.println("O aluno tirou C");
+      } else {
+         System.out.println("O aluno tirou D");
+      }
+
+   }
+}
