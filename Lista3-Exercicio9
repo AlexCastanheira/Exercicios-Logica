@@ -1,0 +1,35 @@
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      float nota1, nota2, nota3, nota4 = 0;
+
+      System.out.println("Digite a primeira nota: ");
+      nota1 = in.nextFloat();
+      System.out.println("Digite a segunda nota: ");
+      nota2 = in.nextFloat();
+      System.out.println("Nota do exame, digite -1 caso não tenha feito ");
+      nota3 = in.nextFloat();
+
+      if (nota3 == -1) {
+         nota4 = (nota1 + nota2) / 2;
+      }
+      if (nota3 >= nota1 && nota3 <= nota2) {
+         nota4 = (nota2 + nota3) / 2;
+      }
+      if (nota3 >= nota2 && nota3 <= nota1) {
+         nota4 = (nota1 + nota3) / 2;
+      }
+
+      if (nota4 >= 6.0) {
+         System.out.printf("A nota do aluno foi %.1f e foi aprovado!\n", nota4);
+      } else if (nota4 >= 3.0) {
+         System.out.printf("A nota do aluno foi %.1f e ficou em exame.\n", nota4);
+
+      } else {
+         System.out.printf("A nota do aluno foi %.1f e foi reprovado.\n", nota4);
+      }
+   }
+}
