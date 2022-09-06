@@ -1,0 +1,34 @@
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+
+      int a, b, c;
+      String mensagem;
+
+      System.out.println("Tamanho do primeiro lado: ");
+      a = in.nextInt();
+      System.out.println("Tamanho do segundo lado: ");
+      b = in.nextInt();
+      System.out.println("Tamanho do terceiro lado: ");
+      c = in.nextInt();
+
+      if (a < b + c && b < a + c && c < a + b) {
+         if (a == b && b == c) {
+            mensagem = "Triangulo Equilátero";
+         } else {
+            if (a == b || b == c || a == c) {
+               mensagem = "Triangulo Isósceles";
+            } else {
+               mensagem = "Triangulo Escaleno";
+            }
+
+         }
+      } else {
+         mensagem = "Não é um triângulo. ";
+      }
+
+      System.out.println(mensagem);
+   }
+}
