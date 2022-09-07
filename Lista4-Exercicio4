@@ -1,0 +1,47 @@
+import java.util.*;
+
+public class Exec4e4 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        float saldo = 0, valor = 0, saque = 0, deposito = 0;
+        System.out.println("Digite uma opção");
+        System.out.println("(a) consulta saldo (b) saque (c) depósito  (d) sair");
+        String opcao = in.next();
+
+        while (!"d".equals(opcao)) {
+
+            if (opcao.equals("a")) {
+                System.out.printf("Seu saldo é de R$ %.2f ", saldo);
+                System.out.println("Digite uma opção");
+                System.out.println("(a) consulta saldo (b) saque (c) depósito  (d) sair");
+                opcao = in.next();
+            }
+            if (opcao.equals("b")) {
+                System.out.println("Digite o valor a sacar: ");
+                saque = in.nextFloat();
+                if (saque > saldo) {
+                    System.out.println("Saldo insuficiente. ");
+                    System.out.println("Digite uma opção");
+                    System.out.println("(a) consulta saldo (b) saque (c) depósito  (d) sair");
+                    opcao = in.next();
+                } else {
+                    saldo = (saldo - saque);
+                    System.out.printf("Seu saldo é de R$ %.2f ", saldo);
+                    System.out.println("\nDigite uma opção");
+                    System.out.println("(a) consulta saldo (b) saque (c) depósito  (d) sair");
+                    opcao = in.next();
+                }
+            }
+            if (opcao.equals("c")) {
+                System.out.println("Digite o valor a depositar: ");
+                deposito = in.nextFloat();
+                saldo = (saldo + deposito);
+                System.out.printf("Seu saldo é de R$ %.2f ", saldo);
+                System.out.println("\nDigite uma opção");
+                System.out.println("(a) consulta saldo (b) saque (c) depósito  (d) sair");
+                opcao = in.next();
+            }
+        }
+    }
+}
