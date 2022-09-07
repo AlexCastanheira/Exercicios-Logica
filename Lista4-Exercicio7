@@ -1,0 +1,18 @@
+import java.util.*;
+
+public class Exec4e7 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        int senha = 0, tents = 0;
+
+        while ( senha != 12345) {
+            System.out.print("digite a senha: ");
+            senha = in.nextInt();
+            tents ++;
+        }
+        System.out.println("\nSenha correta após " + tents + " tentativas.");
+
+    }
+    
+}
