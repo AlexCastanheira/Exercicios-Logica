@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Exec4e5 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        float nota = 0, media = 0, loop = 0;
+        System.out.println("Informe as 5 notas do aluno: ");
+
+        while (loop != 5) {
+            nota = in.nextFloat();
+            media += nota;
+            loop++;
+        }
+        media = (media) / 5f;
+        System.out.print("A media do aluno é: " + media);
+
+    }
+
+}
