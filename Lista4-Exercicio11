@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Exec4e11 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        int valor1, valor2, resultado = 0;
+        System.out.println("Informe o dividendo:");
+        valor1 = in.nextInt();
+        System.out.println("Informe o divisor:");
+        valor2 = in.nextInt();
+
+        if (valor2 == 0) {
+            valor2 = 0;
+            System.out.println("Impossível dividir por zero.");
+            System.out.println("Informe o divisor:");
+            valor2 = in.nextInt();
+            resultado = (valor1 / valor2);
+        } else {
+            resultado = (valor1 / valor2);
+        }
+        System.out.println(resultado);
+
+    }
+
+}
