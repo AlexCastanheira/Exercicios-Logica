@@ -1,0 +1,37 @@
+import java.util.*;
+
+public class Exec4e13 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        float nota1, nota2, nota3, notaM, notaM2, media;
+
+        System.out.println("Digite as 3 notas do aluno: ");
+        nota1 = in.nextFloat();
+        nota2 = in.nextFloat();
+        nota3 = in.nextFloat();
+
+        if (nota1 > nota2 && nota1 > nota3 && nota2 > nota3) {
+            notaM = nota1;
+            notaM2 = nota2;
+        }
+
+        else if (nota1 > nota2 && nota1 > nota3 && nota2 < nota3) {
+            notaM = nota1;
+            notaM2 = nota3;
+        }
+
+        else if (nota2 > nota1 && nota1 > nota3 && nota1 > nota3) {
+            notaM = nota2;
+            notaM2 = nota1;
+        } else {
+            notaM = nota2;
+            notaM2 = nota3;
+        }
+
+        media = (notaM + notaM2) / 3f;
+
+        System.out.printf("A média do aluno é de %.1f ", media);
+
+    }
+}
