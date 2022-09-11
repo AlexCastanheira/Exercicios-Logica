@@ -1,0 +1,26 @@
+import java.util.*;
+
+import javax.print.attribute.standard.Media;
+
+public class Exec4e8 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        int quantidade, loop;
+        float valor, media = 0;
+
+        System.out.println("Qual o numero total de mercadorias? ");
+        quantidade = in.nextInt();
+        loop = quantidade;
+
+        while (loop != 0) {
+
+            System.out.println("Diga o valor de cada mercadoria:");
+            valor = in.nextFloat();
+            media += valor;
+            loop--;
+        }
+        System.out.printf("A média de valores é de R$ %.2f ", media / quantidade);
+    }
+
+}
