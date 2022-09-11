@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Exec4e10 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        float valor, salario = 1200;
+        System.out.println("digite seu salário:");
+        valor = in.nextFloat();
+
+        if (valor < salario) {
+            System.out.println("Insuficiente para um salário ");
+        } else {
+            System.out.printf("Seu salário é de R$ %.2f", valor);
+        }
+
+    }
+
+}
