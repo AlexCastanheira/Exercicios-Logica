@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Testes {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        float bruto, valorHora, horaExt = 0;
+        int empregados, horas, horaExc = 0;
+
+        System.out.println("Informe o número de empregados");
+        empregados = in.nextInt();
+
+        while (empregados != 0) {
+            System.out.println("\nQuantas horas trabalhou na semana:");
+            horas = in.nextInt();
+            if (horas > 40) {
+                horaExc = horas - 40;
+            } else {
+                horaExc = 0;
+            }
+            System.out.println("Diga quanto recebe por hora:");
+            valorHora = in.nextFloat();
+            horaExt = horaExc * 1.5f;
+            bruto = (float) (valorHora * horas) + horaExt;
+            System.out.printf("O funcionário recebe R$ %.2f \n", bruto * 5f);
+            empregados--;
+        }
+    }
+}
