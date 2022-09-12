@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class eleicao {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        int n1, expo, result = 1;
+
+        System.out.println("Digite a base: ");
+        n1 = in.nextInt();
+        System.out.println("Digite o expoente: ");
+        expo = in.nextInt();
+
+        while (expo!= 0){
+            result *= n1;
+            expo--;
+        }
+        System.out.println("resultado: " + result);
+
+    }
+}
