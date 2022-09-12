@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class main {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        int n1 = 0, soma = 0, multi = 1, zeroAdez = 0, maisDez = 0, loop = 10;
+
+        System.out.println("Digite 10 números");
+
+        while (loop != 0) {
+            n1 = in.nextInt();
+            if (n1 >= 0 && n1 <= 10) {
+                multi *= n1;
+                loop--;
+                zeroAdez++;
+            } else if (n1 > 10) {
+                soma += n1;
+                maisDez++;
+                loop--;
+            }
+        }
+        System.out.println("Foram digitados " + zeroAdez + " números entre 0 e 10");
+        System.out.println("e a multiplicação deles é " + multi);
+        System.out.println("Acima de 10 foram digitados " + maisDez + " números");
+        System.out.println("e a soma deles é " + soma);
+
+    }
+}
