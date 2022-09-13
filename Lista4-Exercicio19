@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Exec4e19 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        int n1 = 1, n2 = 1, seq;
+        
+
+        seq = in.nextInt();
+        while (seq != 0) {
+            
+            if (n1 != 0) {
+                      
+                n1 = n1 + n2;
+                n2 = n1 - n2;                
+                
+            }
+            seq --;
+            System.out.println(n1);
+        }
+
+    }
+
+}
