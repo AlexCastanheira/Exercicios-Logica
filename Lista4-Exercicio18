@@ -1,0 +1,35 @@
+import java.util.*;
+
+public class Exec4e18 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        int quant, idade = 0, total = 0, media = 0, maior = 1, menor = 150, loop = 0;
+        System.out.println("Diga o número de pessoas: ");
+
+        quant = in.nextInt();
+        loop = quant;
+
+        while (loop != 0 || idade == 0) {
+            System.out.println("Informe a idade: ");
+            idade = in.nextInt();
+            if (idade > 0 && idade < 150) {
+                total = total + idade;
+                if (idade > maior) {
+                    maior = idade;
+                }
+                if (idade < menor) {
+                    menor = idade;
+                }
+                media = (total / quant);
+            }
+            loop--;
+        }
+        System.out.println("O grupo tem " + quant + " pessoas.");
+        System.out.println("A média de idade é de " + media + " anos");
+        System.out.println("A idade menor é de " + menor);
+        System.out.println("A idade maior é de " + maior);
+
+    }
+
+}
