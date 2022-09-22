@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Exec4e22 {
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+        float x, y;
+        int ano = 0;
+        
+        System.out.println("Informe a população dos paises A.");
+        x = in.nextInt();
+
+        System.out.println("Informe a população dos paises B.");
+        y = in.nextInt();
+
+        while (x <= y) {
+            x = (x * 0.03f) + x;
+            y = (y * 0.02f) + y;
+
+            ano++;
+
+        }
+
+        System.out.println("Precisa de " + ano + " anos para a população se igualar. \n");
+
+    }
+
+}
