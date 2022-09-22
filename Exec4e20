@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Exec4e20 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        int tamanho, loop, loop2;
+
+        System.out.println("informe o tamanho");
+        tamanho = in.nextInt();
+
+        loop = tamanho;
+        loop2 = tamanho;
+
+        while (loop != 0) {
+            while (tamanho != 0) {
+                System.out.print(" *");
+                tamanho--;
+            }
+            System.out.println();
+            tamanho = loop2;
+            loop--; 
+        }
+    }
+
+}
