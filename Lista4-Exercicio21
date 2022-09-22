@@ -1,0 +1,42 @@
+import java.util.*;
+
+public class Exec4e21 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        int somaP = 0, somaI = 0, maior = 0, menor = 0, mediaP = 0, mediaI = 0, n = 0;
+        boolean par, impar;
+
+        while (n > -1) {
+            System.out.println("Digite um numero:");
+            n = in.nextInt();
+            if (n > 0) {
+                if (n % 2 == 0) {
+                    par = true;
+                    somaP += n;
+                    mediaP++;
+                    if (par = true && maior < n) {
+                        maior = n;
+                    }
+                } else if (n % 2 != 0) {
+                    impar = true;
+                    menor = n;
+                    somaI += n;
+                    mediaI++;
+                    if (impar = true && menor > n) {
+                        menor = n;
+                    }
+
+                }
+
+            }
+        }
+
+        System.out.println("A média dos pares é de " + somaP / mediaP);
+        System.out.println("A média dos impares é de " + somaI / mediaI);
+        System.out.println("O maior numero PAR é " + maior);
+        System.out.println("O menor numero IMPAR é " + menor);
+
+    }
+
+}
