@@ -1,0 +1,55 @@
+import java.util.*;
+
+public class Exec4e24 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        String nome, nomeX = "", nomeY = "", sexo, maisAlto = "", maisPes = "";
+        int idade, count = 0, media = 0;
+        float peso = 0, altura = 0, mAlt = 0, mPes = 0;
+        boolean masc = false, fem = false;
+
+        while (true) {
+            System.out.println("Informe o nome: (DIGITE @ PARA SAIR)");
+            nome = in.next();
+
+            if (nome.equals("@"))
+                break;
+
+            System.out.println("Informe o sexo: (M) Masculino - (F) Feminino");
+            sexo = in.next();
+            if (sexo.equals("m") || sexo.equals("M")) {
+                masc = true;
+                nomeX = nome;
+            }
+            if (sexo.equals("f") || sexo.equals("F")) {
+                fem = true;
+                nomeY = nome;
+            }
+            System.out.println("Informe a idade: ");
+            idade = in.nextInt();
+            media += idade;
+
+            System.out.println("Informe a altura: ");
+            altura = in.nextFloat();
+            if (altura > mAlt && masc == true) {
+                maisAlto = nomeX;
+                mAlt = altura;
+            }
+            System.out.println("Informe o peso: ");
+            peso = in.nextFloat();
+            if (peso < mPes && fem == true) {
+                maisPes = nomeY;
+                mPes = peso;
+            }
+            count++;
+
+        }
+
+        System.out.println(maisAlto + " é o atleta masculino mais alto.");
+        System.out.println(maisPes + " é a atleta feminina mais pesada. ");
+        System.out.println("A média de idade é de " + media / count + " anos.");
+
+    }
+
+}
