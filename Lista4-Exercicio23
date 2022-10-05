@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Exec4e23 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        float minuto = 0, segundo = 0, hora = 0, perda = 0, massa = in.nextFloat();
+
+        while (massa > 0.10f) {
+            perda = massa * 0.25f;
+            massa = massa - perda;
+            segundo += 30;
+            if (segundo > 59) {
+                minuto += 1.0f;
+                segundo = 0;
+
+            } else if (minuto > 59.0) {
+                hora += 1.0f;
+                minuto = 0;
+            }
+        }
+        System.out.printf("A massa será de %.2f gramas", massa + " em %.0f:", hora + "%.0f:", minuto + "%.0f\n",
+                segundo);
+
+    }
+
+}
